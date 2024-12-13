@@ -8,7 +8,13 @@ function main(dtoIn) {
             position: employee.position,
             department: employee.department,
             email: `${employee.firstName.toLowerCase()}.${employee.lastName.toLowerCase()}@firma.com`, // Generování emailu
-            hiredDate: new Date(employee.hiredDate).toLocaleDateString() // Formátovaný datum nástupu
+            const dtoIn = {
+  count: 50,
+  age: {
+    min: 19,
+    max: 35
+  }
+}
         };
     });
     // Vracení strukturovaného výstupu
@@ -18,7 +24,7 @@ function main(dtoIn) {
 // Příklad vstupních dat (dtoIn)
 const dtoIn = [
     { firstName: 'Jan', lastName: 'Novák', position: 'Developer', department: 'IT', hiredDate: '2022-05-01' },
-    { firstName: 'Eva', lastName: 'Svobodová', position: 'HR Manager', department: 'Human Resources', hiredDate: '2020-08-15' },
+    { firstName: 'Eva', lastName: 'Svobodová', position: 'HR Manager', department: 'Human Resources', birthDate: '2020-08-15' },
     { firstName: 'Petr', lastName: 'Kovář', position: 'Designer', department: 'Marketing', hiredDate: '2021-02-20' }
 ];
 
